@@ -1,4 +1,3 @@
-import urllib
 class Webpage:
 	def __init__(self, url, code = None, tokens = None):
 		self.url = url
@@ -6,5 +5,6 @@ class Webpage:
 		self.tokens = tokens
 
 def GetCode(url):
+	url = "https://google.com"
 	page = urllib.request.urlopen(url).read()
-	return page
+	return Webpage(url, code)
